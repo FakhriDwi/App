@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
+      <ion-back-button defaultHref="home"></ion-back-button>
     </ion-buttons>
     <ion-title>My Diary</ion-title>
   </ion-toolbar>
@@ -16,9 +16,9 @@
     <ion-card *ngFor="let item of data">
       <ion-card-content> {{ data.no }} </ion-card-content>
     </ion-card>
-    <ion-card>
-      <ion-card-content> {{ data.tanggal }} </ion-card-content>
-    </ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>{{ data.tanggal }}</ion-card-subtitle>
+    </ion-card-header>
     <ion-card>
       <ion-card-content> {{ data.isi }} </ion-card-content>
     </ion-card>
